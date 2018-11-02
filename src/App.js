@@ -17,7 +17,7 @@ class App extends Component {
 
     componentDidMount(){
 
-        fetch('http://api.aladhan.com/v1/timingsByCity?city=Mahdia&country=Tunisia&method=1&midnightMode=1')
+        fetch('https://api.aladhan.com/v1/timingsByCity?city=Mahdia&country=Tunisia&method=1&midnightMode=1')
             .then(response=>response.json())
             .then(data=>{
 
@@ -40,7 +40,14 @@ class App extends Component {
     return (
       <div className="App" style={{overflowY:"scroll"}}>
 
-          <p>helllllo</p>
+          {this.state.time.map(value=>{
+              return(
+                  <div className="prayer">
+                  <p className="transbox" key={value[0]}>{value[0]}</p>
+                  <p className="transbox" key={value[0]}>{value[1]}</p>
+                  </div>
+              );
+          }  )}
           </div>
     );
   }
