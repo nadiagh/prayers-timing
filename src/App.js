@@ -40,14 +40,7 @@ class App extends Component {
     return (
       <div className="App" style={{overflowY:"scroll"}}>
 
-          {this.state.time.map(value=>{
-              return(
-                  <div className="prayer">
-                  <p className="transbox" key={value[0]}>{value[0]}</p>
-                  <p className="transbox" key={value[0]}>{value[1]}</p>
-                  </div>
-              );
-          }  )}
+          <p>helllllo</p>
           </div>
     );
   }
